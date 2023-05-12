@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificacion de imagenes</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+    <div class="form">
+      <h2>Clasificación de imagenes</h2>
+      <div class="grid">
+
+        <div class="form-element">
+            <img src="#" id="input_image" width="224" height="224" />
+        <!-- Creación botones para subir y predicción-->    	            
+            <input type="file" name="fileupload" accept="image/*" onchange="display(event)" />
+          <button onclick="predict_animal()">Predecir imagen</button>
+        </div>
+        <div class="list">
+          <ul>
+            <li>Aguila</li>
+            <li>Alce</li>
+            <li>Cabra</li>
+            <li>Delfin</li>
+            <li>Leon</li>
+          </ul>
+        </div>
+        <div class="list">
+          <ul>
+            <li>Libelula</li>
+            <li>Lobo</li>
+            <li>Luciernaga</li>
+            <li>Mandril</li>
+            <li>Tlacuache</li>
+          </ul>
+        </div>
+
+      </div>
+      <h3 id="output_text"></h3>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
